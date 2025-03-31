@@ -1,0 +1,47 @@
+from IPython.core.display import display, HTML, SVG
+
+# Відображення заголовку
+display(HTML("<h1 style='text-align: center;'>Інформація про Джибуті</h1>"))
+
+# Відображення основної інформації з форматуванням
+display(HTML("""
+<p><b>Столиця:</b> Джибуті</p>
+<p><b>Площа:</b> <span style='color: blue;'>23,200 км²</span></p>
+<p><b>Населення:</b> <span style='color: green;'>~1 млн</span></p>
+<p><b>Державний устрій:</b> <i>Президентська республіка</i></p>
+"""))
+
+# Відображення таблиці
+display(HTML("""
+<table border="1" style="width:50%; text-align:center;">
+    <tr><th>Параметр</th><th>Значення</th></tr>
+    <tr><td><b>Столиця</b></td><td>Джибуті</td></tr>
+    <tr><td><b>Площа</b></td><td>23,200 км²</td></tr>
+    <tr><td><b>Населення</b></td><td>~1 млн</td></tr>
+    <tr><td><b>Державний устрій</b></td><td>Президентська республіка</td></tr>
+</table>
+"""))
+
+# Вкладений список пам'яток
+display(HTML("""
+<h3>Видатні пам'ятки:</h3>
+<ul>
+    <li>Озеро Ассаль</li>
+    <li>Національний парк Дей</li>
+    <li>Гранд-Марше (ринок)</li>
+</ul>
+"""))
+
+# Відображення прапора у форматі SVG
+svg_flag = """
+<svg width="150" height="100" xmlns="http://www.w3.org/2000/svg">
+  <rect width="150" height="50" fill="lightblue"/>
+  <rect y="50" width="150" height="50" fill="green"/>
+  <polygon points="0,0 50,50 0,100" fill="white"/>
+  <circle cx="20" cy="50" r="10" fill="red"/>
+</svg>
+"""
+display(SVG(svg_flag))
+
+# Гіперпосилання
+display(HTML("<p><b>Детальніше:</b> <a href='https://en.wikipedia.org/wiki/Djibouti' target='_blank'>Вікіпедія</a></p>"))
